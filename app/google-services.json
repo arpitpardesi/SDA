@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "691830973616",
+    "firebase_url": "https://studevapp-d9bfa.firebaseio.com",
+    "project_id": "studevapp-d9bfa",
+    "storage_bucket": "studevapp-d9bfa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:691830973616:android:7012d1b2069299b2",
+        "android_client_info": {
+          "package_name": "com.sma"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "691830973616-co5jhqlps57i56lkst72nugdpptqt4ei.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDpo02z6rOw1sXSdJHZugO2WbIMZsF7xpo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
