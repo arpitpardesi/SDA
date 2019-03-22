@@ -35,7 +35,7 @@
         app:layout_constraintVertical_bias="0.185" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/editTextEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -87,7 +87,7 @@
         app:layout_constraintVertical_bias="0.668" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/buttonsignup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/colorAccent"
@@ -101,7 +101,7 @@
         app:layout_constraintVertical_bias="0.779" />
 
     <EditText
-        android:id="@+id/editText8"
+        android:id="@+id/editTextPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -120,7 +120,7 @@
         android:text="Already registered? Login here"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4"
+        app:layout_constraintTop_toBottomOf="@+id/buttonsignup"
         app:layout_constraintVertical_bias="0.176"
         tools:layout_editor_absoluteX="0dp" />
 </android.support.constraint.ConstraintLayout>
