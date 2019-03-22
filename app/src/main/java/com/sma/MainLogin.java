@@ -17,15 +17,15 @@ public class MainLogin extends AppCompatActivity implements View.OnClickListener
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        findViewById(R.id.textviewLI).setOnClickListener(this);
+        findViewById(R.id.textViewLI).setOnClickListener(this);
 
 
     }
 
     @Override
-    public void onClick(View view) {
-        switch (view.getId()){
-            case R.id.textviewLI:
+    public void onClick(View view1) {
+        switch (view1.getId()){
+            case R.id.textViewLI:
                 startActivity(new Intent(this, MainSignUp.class));
                 break;
         }

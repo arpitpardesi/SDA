@@ -16,10 +16,11 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 
 public class MainSignUp extends AppCompatActivity implements View.OnClickListener {
-    EditText editTextEmail, editTextPassword;
+    EditText editTextE, editTextP;
 
     private FirebaseAuth mAuth;
 
@@ -31,17 +32,29 @@ public class MainSignUp extends AppCompatActivity implements View.OnClickListene
         setSupportActionBar(toolbar);
 
         findViewById(R.id.textviewSU).setOnClickListener(this);
-
-        editTextEmail =(EditText) findViewById(R.id.editTextEmail);
-        editTextPassword =(EditText) findViewById(R.id.editTextPassword);
+/*
+        editTextE =findViewById(R.id.editTextEmail);
+        editTextP =findViewById(R.id.editTextPassword);
 
         mAuth = FirebaseAuth.getInstance();
+*/
+
+
+        //findViewById(R.id.buttonSU).setOnClickListener(this);
+
 
 
     }
 
-
     @Override
+/*
+    public void onStart() {
+        super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        updateUI(currentUser);
+    }
+ */
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.buttonsignup:
@@ -55,30 +68,30 @@ public class MainSignUp extends AppCompatActivity implements View.OnClickListene
     }
 
     private void registerUser() {
-        String email = editTextEmail.getText().toString().trim();
-        String password= editTextPassword.getText().toString().trim();
+        String email = editTextE.getText().toString().trim();
+        String password= editTextP.getText().toString().trim();
 
         if (email.isEmpty()){
-            editTextEmail.setError("Email required");
-            editTextEmail.requestFocus();
+            editTextE.setError("Email required");
+            editTextE.requestFocus();
             return;
         }
 
         if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
-            editTextEmail.setError("Enter a valid email");
-            editTextEmail.requestFocus();
+            editTextE.setError("Enter a valid email");
+            editTextE.requestFocus();
             return;
         }
 
         if (password.isEmpty()){
-            editTextPassword.setError("Password required");
-            editTextPassword.requestFocus();
+            editTextP.setError("Password required");
+            editTextP.requestFocus();
             return;
         }
 
         if (password.length()<6){
-            editTextPassword.setError("Minimum length of password is 6");
-            editTextPassword.requestFocus();
+            editTextP.setError("Minimum length of password is 6");
+            editTextP.requestFocus();
             return;
         }
 
@@ -86,7 +99,7 @@ public class MainSignUp extends AppCompatActivity implements View.OnClickListene
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-                    Toast.makeText(getApplicationContext(),"User Resitered Successful", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"User Registered Successful", Toast.LENGTH_SHORT).show();
 
                 }
             }

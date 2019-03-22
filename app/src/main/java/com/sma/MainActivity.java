@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        Button lbutton = (Button) findViewById(R.id.button);
+        Button lbutton = (Button) findViewById(R.id.buttonLI);
         lbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        Button sbutton = (Button) findViewById(R.id.button2);
+        Button sbutton = (Button) findViewById(R.id.buttonSU);
         sbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
