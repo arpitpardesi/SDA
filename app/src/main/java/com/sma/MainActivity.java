@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
+/*
         Button lbutton = (Button) findViewById(R.id.buttonLI);
         lbutton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,15 +58,16 @@ public class MainActivity extends AppCompatActivity
                 signupb();
             }
         });
+        */
     }
 
-    public void signupb()
+    public void signupb(View v)
     {
         Intent sb = new Intent(this, MainSignUp.class);
         startActivity(sb);
     }
 
-    public void loginb()
+    public void loginb(View v)
     {
         Intent lb = new Intent(this, MainLogin.class );
         startActivity(lb);
@@ -126,5 +127,9 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void onClick(View view) {
+
     }
 }

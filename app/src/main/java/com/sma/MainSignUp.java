@@ -7,6 +7,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.EditText;
@@ -20,8 +21,8 @@ import com.google.firebase.auth.FirebaseUser;
 
 
 public class MainSignUp extends AppCompatActivity implements View.OnClickListener {
-    EditText editTextE, editTextP;
-
+    private EditText editTextE;
+    private EditText editTextP;
     private FirebaseAuth mAuth;
 
     @Override
@@ -30,41 +31,21 @@ public class MainSignUp extends AppCompatActivity implements View.OnClickListene
         setContentView(R.layout.activity_main_sign_up);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
         findViewById(R.id.textviewSU).setOnClickListener(this);
 /*
-        editTextE =findViewById(R.id.editTextEmail);
-        editTextP =findViewById(R.id.editTextPassword);
-
+        editTextE =(EditText) findViewById(R.id.editTextEmail);
+        editTextP =(EditText) findViewById(R.id.editTextPassword);
         mAuth = FirebaseAuth.getInstance();
-*/
-
-
-        //findViewById(R.id.buttonSU).setOnClickListener(this);
-
-
-
+*/      //findViewById(R.id.buttonSU).setOnClickListener(this);
     }
 
     @Override
-/*
+
     public void onStart() {
         super.onStart();
         // Check if user is signed in (non-null) and update UI accordingly.
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-        updateUI(currentUser);
-    }
- */
-    public void onClick(View view) {
-        switch (view.getId()){
-            case R.id.buttonsignup:
-                registerUser();
-                break;
-
-            case R.id.textviewSU:
-                startActivity(new Intent(this, MainLogin.class));
-                break;
-        }
+        //FirebaseUser currentUser = mAuth.getCurrentUser();
+        //updateUI(currentUser);
     }
 
     private void registerUser() {
@@ -95,15 +76,41 @@ public class MainSignUp extends AppCompatActivity implements View.OnClickListene
             return;
         }
 
+
+
+    }
+
+    public void onClick(View view) {
+
+        switch (view.getId()){
+            /*case R.id.buttonsignup:
+                registerUser();
+                break;
+*/
+            case R.id.textviewSU:
+                startActivity(new Intent(this, MainLogin.class));
+                break;
+        }
+/*
+        String email = editTextE.getText().toString().trim();
+        String password= editTextP.getText().toString().trim();
         mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-                    Toast.makeText(getApplicationContext(),"User Registered Successful", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainSignUp.this,"User Registered Successful", Toast.LENGTH_SHORT).show();
+                    Intent i = new Intent(MainSignUp.this, MainLogin.class);
+                    startActivity(i);
+                }
+                else{
+                    Log.e("Error", task.getException().getMessage());
+                    Toast.makeText(MainSignUp.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
 
                 }
             }
         });
+*/
 
     }
+
 }
