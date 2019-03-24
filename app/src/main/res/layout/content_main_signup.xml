@@ -91,12 +91,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/colorAccent"
+        android:onClick="onClick"
         android:text="Sign Up"
         android:textColor="#fff"
-        android:onClick="onClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.306"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.779" />
@@ -124,4 +124,34 @@
         app:layout_constraintTop_toBottomOf="@+id/buttonsignup"
         app:layout_constraintVertical_bias="0.176"
         tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/textViewOR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Or"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.558"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.772" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/googlesignup"
+        android:layout_width="51dp"
+        android:layout_height="51dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:backgroundTint="@color/common_google_signin_btn_text_dark_default"
+        app:fabSize="auto"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.725"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.783"
+        tools:srcCompat="@drawable/googleg_standard_color_18" />
 </android.support.constraint.ConstraintLayout>
