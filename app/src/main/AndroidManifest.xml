@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainState"></activity>
+        <activity android:name=".MainColleges"></activity>
+        <activity android:name=".MainState" />
         <activity
             android:name=".MainSignUp"
             android:label="@string/title_activity_main_sign_up"

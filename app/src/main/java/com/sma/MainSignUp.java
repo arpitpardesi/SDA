@@ -32,6 +32,8 @@ public class MainSignUp extends AppCompatActivity implements View.OnClickListene
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         findViewById(R.id.textviewSU).setOnClickListener(this);
+
+
 /*
         editTextE =(EditText) findViewById(R.id.editTextEmail);
         editTextP =(EditText) findViewById(R.id.editTextPassword);
