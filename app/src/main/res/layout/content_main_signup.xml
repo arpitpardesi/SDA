@@ -145,6 +145,7 @@
         android:layout_height="51dp"
         android:clickable="true"
         android:focusable="true"
+        android:onClick="GoogleSU"
         app:backgroundTint="@color/common_google_signin_btn_text_dark_default"
         app:fabSize="auto"
         app:layout_constraintBottom_toBottomOf="parent"
