@@ -46,6 +46,7 @@ public class MainSignUp extends AppCompatActivity implements View.OnClickListene
 
         editTextE = (EditText) findViewById(R.id.editTextEmail);
         editTextP = (EditText) findViewById(R.id.editTextPassword);
+        mAuth = FirebaseAuth.getInstance();
 
         // Configure Google Sign In
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -55,7 +56,6 @@ public class MainSignUp extends AppCompatActivity implements View.OnClickListene
 
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
 
-        mAuth = FirebaseAuth.getInstance();
 /*
         buttonsi = findViewById(R.id.googlesignup);
         buttonsi.setOnClickListener(new View.OnClickListener() {
@@ -95,7 +95,9 @@ public class MainSignUp extends AppCompatActivity implements View.OnClickListene
                 // Google Sign In was successful, authenticate with Firebase
                 GoogleSignInAccount account = task.getResult(ApiException.class);
                 //assert account != null;
-                firebaseAuthWithGoogle(account);
+                if (account != null) {
+                    firebaseAuthWithGoogle(account);
+                }
             } catch (ApiException e) {
                 // Google Sign In failed, update UI appropriately
 

@@ -12,7 +12,6 @@
     <string name="management">Development</string>
     <string name="application">Application</string>
     <string name="login">Login</string>
-    <string name="sign_up">Sign Up</string>
     <string name="title_activity_login">Sign in</string>
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
@@ -34,7 +33,6 @@
     <string name="name">Name</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
-    <string name="re_enter_password">Re-enter password</string>
     <string name="date_of_birth">Date of birth</string>
     <string name="mobile_number">Mobile Number</string>
     <string name="title_activity_settings">Settings</string>
@@ -114,5 +112,19 @@
     <string name="select_state">Select State</string>
     <string name="select_affiliated_college">Select Affiliated College</string>
     <string name="select_university">Select University</string>
+    <string name="or">Or</string>
+    <string name="dob">DOB</string>
+    <string name="already_registered_login_here">Already registered? Login here</string>
+    <string name="re_enter_password">Re-Enter Password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="website">Website</string>
+    <string name="welcome_to_acropolis">Welcome to Acropolis</string>
+    <string name="attendance">Attendance</string>
+    <string name="student_profile">Student Profile</string>
+    <string name="marks">Marks</string>
+    <string name="profile">Profile</string>
+    <string name="updates">Updates</string>
+    <string name="bus_routes">Bus Routes</string>
+    <string name="student_dashboard">Student Dashboard</string>
 
 </resources>

@@ -6,6 +6,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 public class MainColleges extends AppCompatActivity {
 
@@ -16,11 +17,9 @@ public class MainColleges extends AppCompatActivity {
         Configuration config = getResources().getConfiguration();
 
         WebView webView = findViewById(R.id.webviewColl);
-        webView.loadUrl("www.google.com");
+        webView.loadUrl("http://atc.ac.in");
+        webView.setWebViewClient(new WebViewClient());
 
-        FloatingActionButton floatingActionButton = findViewById(R.id.floatingActionButton);
-        Intent i = new Intent(this, MainActivity.class);
-        startActivity(i);
 
     }
 }

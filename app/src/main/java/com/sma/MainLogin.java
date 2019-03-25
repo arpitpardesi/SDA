@@ -31,4 +31,8 @@ public class MainLogin extends AppCompatActivity implements View.OnClickListener
         }
     }
 
+    public void state(View view) {
+        Intent state = new Intent(this, MainState.class);
+        startActivity(state);
+    }
 }
