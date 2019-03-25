@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">SDA</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -11,7 +11,7 @@
     <string name="student">Student</string>
     <string name="management">Development</string>
     <string name="application">Application</string>
-    <string name="login">Login</string>
+
     <string name="title_activity_login">Sign in</string>
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
@@ -30,9 +30,6 @@
     <string name="title_activity_main_sign_up">MainSignUp</string>
     <string name="title_activity_main_signup">MainSignup</string>
     <string name="signup_to_sda">SignUp to SDA</string>
-    <string name="name">Name</string>
-    <string name="email">Email</string>
-    <string name="password">Password</string>
     <string name="date_of_birth">Date of birth</string>
     <string name="mobile_number">Mobile Number</string>
     <string name="title_activity_settings">Settings</string>
@@ -126,5 +123,20 @@
     <string name="updates">Updates</string>
     <string name="bus_routes">Bus Routes</string>
     <string name="student_dashboard">Student Dashboard</string>
+    <string name="existing_student">Existing Student</string>
+    <string name="register_new_student">Register New Student</string>
+    <string name="email">Email</string>
+    <string name="name">Name</string>
+    <string name="roll_number">Roll Number</string>
+    <string name="mobile">Mobile</string>
+    <string name="branch">Branch</string>
+    <string name="dob_ddmmyy">DOB ddmmyy</string>
+    <string name="year">Year</string>
+    <string name="register">Register</string>
+    <string name="login_to_sda">Login to SDA</string>
+    <string name="password">Password</string>
+    <string name="login" >Login</string>
+    <string name="don_t_have_an_account_signup">Don\'t have an account? SignUp</string>
+    <string name="username">Username</string>
 
 </resources>

@@ -29,4 +29,9 @@ public class MainDashboard extends AppCompatActivity {
 
         startActivity(buses);
     }
+
+    public void rnu(View view) {
+        Intent i = new Intent(this, MainNewUser.class);
+        startActivity(i);
+    }
 }
