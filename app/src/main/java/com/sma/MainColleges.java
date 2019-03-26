@@ -1,5 +1,6 @@
 package com.sma;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.support.design.widget.FloatingActionButton;
@@ -10,6 +11,7 @@ import android.webkit.WebViewClient;
 
 public class MainColleges extends AppCompatActivity {
 
+    @SuppressLint("SetJavaScriptEnabled")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,6 +21,8 @@ public class MainColleges extends AppCompatActivity {
         WebView webView = findViewById(R.id.webviewColl);
         webView.loadUrl("http://atc.ac.in");
         webView.setWebViewClient(new WebViewClient());
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
 
 
     }

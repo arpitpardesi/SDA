@@ -8,6 +8,33 @@
     tools:context=".MainSignUp"
     tools:showIn="@layout/activity_main_sign_up">
 
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/common_google_signin_btn_text_light_normal"
+        android:onClick="GoogleSU"
+        android:text="@string/google"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.748" />
+
+    <Spinner
+        android:id="@+id/spinnerSF3"
+        android:layout_width="211dp"
+        android:layout_height="30dp"
+        android:entries="@array/spinnerFS"
+        android:hint="@string/select_account_type"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.448" />
+
     <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
@@ -48,7 +75,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.478" />
+        app:layout_constraintVertical_bias="0.58" />
 
     <EditText
         android:id="@+id/editTextPassword"
@@ -72,7 +99,7 @@
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonsignup"
-        app:layout_constraintVertical_bias="0.457"
+        app:layout_constraintVertical_bias="0.54"
         tools:layout_editor_absoluteX="0dp" />
 
     <TextView
@@ -88,21 +115,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.571" />
+        app:layout_constraintVertical_bias="0.668" />
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/googlesignup"
-        android:layout_width="51dp"
-        android:layout_height="51dp"
-        android:clickable="true"
-        android:focusable="true"
-        android:onClick="GoogleSU"
-        app:backgroundTint="@color/common_google_signin_btn_text_dark_default"
-        app:fabSize="auto"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.66"
-        tools:srcCompat="@drawable/googleg_standard_color_18" />
 </android.support.constraint.ConstraintLayout>

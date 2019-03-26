@@ -108,32 +108,5 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.546" />
 
-    <Button
-        android:id="@+id/buttonRNU"
-        android:layout_width="180dp"
-        android:layout_height="48dp"
-        android:background="@color/colorAccent"
-        android:text="@string/register_new_student"
-        android:textColor="#fff"
-        android:onClick="rnu"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.692" />
 
-    <Button
-        android:id="@+id/buttonEU"
-        android:layout_width="180dp"
-        android:layout_height="48dp"
-        android:background="@color/colorAccent"
-        android:text="@string/existing_student"
-        android:textColor="#fff"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.828" />
 </android.support.constraint.ConstraintLayout>
