@@ -27,7 +27,7 @@
     <WebView
         android:layout_width="717dp"
         android:layout_height="362dp"
-        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteX="7dp"
         tools:layout_editor_absoluteY="48dp" />
 
 </android.support.constraint.ConstraintLayout>

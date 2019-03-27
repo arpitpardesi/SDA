@@ -14,7 +14,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainTeacher"></activity>
+        <activity android:name=".MainTeacher" />
         <activity android:name=".MainNewUser" />
         <activity android:name=".MainBus" />
         <activity android:name=".MainDashboard" />

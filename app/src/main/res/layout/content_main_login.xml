@@ -56,7 +56,6 @@
         android:background="@color/colorAccent"
         android:text="@string/login"
         android:textColor="#fff"
-        android:onClick="state"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

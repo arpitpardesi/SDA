@@ -97,6 +97,22 @@
         <item>Faculty</item>
     </string-array>
 
+    <string-array name="spinnerState">
+        <item>Madhya Pradesh</item>
+    </string-array>
+
+    <string-array name="spinnerCity">
+        <item>Indore</item>
+    </string-array>
+
+    <string-array name="spinnerUniversity">
+        <item>RGPV</item>
+    </string-array>
+
+    <string-array name="spinnerCollege">
+        <item>Acropolis Technical Campus</item>
+    </string-array>
+
     <string-array name="multi_select_list_preference_default_value" />
 
     <string name="pref_title_system_sync_settings">System sync settings</string>
@@ -148,5 +164,15 @@
     <string name="select_city">Select City</string>
     <string name="google">Google</string>
     <string name="about_us">About Us</string>
+    <string name="input_error_name" />
+    <string name="input_error_email_invalid" />
+    <string name="input_error_password" />
+    <string name="input_error_password_length" />
+    <string name="input_error_phone" />
+    <string name="input_error_phone_invalid" />
+    <string name="input_error_email" />
+    <string name="registration_success" />
+    <string name="already_registered" />
+    <string name="logout">Logout</string>
 
 </resources>
