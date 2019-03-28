@@ -8,7 +8,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 public class MainLogin extends AppCompatActivity implements View.OnClickListener {
+
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,8 +21,9 @@ public class MainLogin extends AppCompatActivity implements View.OnClickListener
         setContentView(R.layout.activity_main_login);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
         findViewById(R.id.textViewLI).setOnClickListener(this);
+
+        mAuth = FirebaseAuth.getInstance();
 
 
     }
@@ -26,9 +32,19 @@ public class MainLogin extends AppCompatActivity implements View.OnClickListener
     public void onClick(View view1) {
         switch (view1.getId()){
             case R.id.textViewLI:
-                startActivity(new Intent(this, MainSignUp.class));
+                Intent intent = new Intent(this, MainSignUp2.class);
+                startActivity(intent);
+                //startActivity(new Intent(this, MainSignUp.class));
                 break;
         }
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        //updateUI(currentUser);
     }
 
     public void state(View view) {
