@@ -117,7 +117,7 @@ public class MainSignUp extends AppCompatActivity implements View.OnClickListene
                             // Sign in success, update UI with the signed-in user's information
 
                             FirebaseUser user = mAuth.getCurrentUser();
-                            Intent i = new Intent(getApplicationContext(), MainState.class);
+                            Intent i = new Intent(getApplicationContext(), MainVerify.class);
                             startActivity(i);
                             finish();
                             Toast.makeText(getApplicationContext(), "User signup successfully", Toast.LENGTH_SHORT).show();

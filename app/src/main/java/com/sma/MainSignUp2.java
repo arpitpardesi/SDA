@@ -12,10 +12,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class MainSignUp2 extends AppCompatActivity implements View.OnClickListener {
 
@@ -96,12 +98,19 @@ public class MainSignUp2 extends AppCompatActivity implements View.OnClickListen
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         //checking if success
+
+
+
                         if(task.isSuccessful()){
                             //display some message here
                             startActivity(new Intent(MainSignUp2.this, MainLogin.class));
                             finish();
                             Toast.makeText(MainSignUp2.this,"Successfully registered",Toast.LENGTH_LONG).show();
-                        }else{
+                        }
+                        else if (firebaseAuth.getCurrentUser() != null){
+                            Toast.makeText(MainSignUp2.this, "Already registerd", Toast.LENGTH_LONG).show();
+                        }
+                        else{
                             //display some message here
                             Toast.makeText(MainSignUp2.this,"Registration Error",Toast.LENGTH_LONG).show();
                         }

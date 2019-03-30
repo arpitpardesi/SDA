@@ -4,6 +4,9 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
+
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainTeacher extends AppCompatActivity {
 
@@ -17,4 +20,13 @@ public class MainTeacher extends AppCompatActivity {
         Intent i = new Intent(this, MainNewUser.class);
         startActivity(i);
     }
+
+    public void logoutT(View view) {
+        FirebaseAuth.getInstance().signOut();
+        finish();
+        Toast.makeText(getApplicationContext(), "Logout Successful", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(this, MainActivity.class));
+    }
+
+
 }

@@ -45,7 +45,8 @@ public class MainLogin extends AppCompatActivity implements View.OnClickListener
             //close this activity
             finish();
             //opening profile activity
-            startActivity(new Intent(getApplicationContext(), MainDashboard.class));
+
+            startActivity(new Intent(getApplicationContext(), MainVerify.class));
         }
 
         //setContentView(R.layout.activity_main_login);
@@ -87,15 +88,18 @@ public class MainLogin extends AppCompatActivity implements View.OnClickListener
         progressDialog.setMessage("Registering Please Wait...");
         progressDialog.show();
 
+
         //logging in the user
-        mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+        mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(MainLogin.this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         progressDialog.dismiss();
                         //if the task is successful
+
                         if(task.isSuccessful()){
+                            FirebaseUser user = mAuth.getCurrentUser();
                             //start the profile activity
-                            startActivity(new Intent(getApplicationContext(), MainDashboard.class));
+                            startActivity(new Intent(getApplicationContext(), MainVerify.class));
                             finish();
                         }
                     }

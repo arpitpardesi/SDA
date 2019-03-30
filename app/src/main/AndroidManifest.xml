@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainFacultyReg"></activity>
+        <activity android:name=".MainVerify"></activity>
+        <activity android:name=".MainFacultyReg" />
         <activity android:name=".MainAdmin" />
         <activity android:name=".MainSignUp2" />
         <activity android:name=".MainTeacher" />
