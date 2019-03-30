@@ -6,6 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".MainNewUser">
 
+    <Spinner
+        android:id="@+id/spinnerYear"
+        android:layout_width="214dp"
+        android:layout_height="45dp"
+        android:entries="@array/year"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.804" />
+
     <TextView
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
@@ -25,6 +37,7 @@
         android:id="@+id/editTextName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/name"
         android:inputType="textPersonName"
@@ -33,12 +46,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.189"
-        android:autofillHints="" tools:targetApi="o"/>
+        tools:targetApi="o" />
 
     <EditText
         android:id="@+id/editTextEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/email"
         android:inputType="textEmailAddress"
@@ -47,12 +61,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.294"
-        android:autofillHints="" tools:targetApi="o"/>
+        tools:targetApi="o" />
 
     <EditText
         android:id="@+id/editTextRoll"
         android:layout_width="wrap_content"
         android:layout_height="43dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/roll_number"
         android:inputType="textPersonName|textPassword"
@@ -61,7 +76,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.395"
-        android:autofillHints="" tools:targetApi="o"/>
+        tools:targetApi="o" />
 
     <Button
         android:id="@+id/buttonRegister"
@@ -81,6 +96,7 @@
         android:id="@+id/editTextMobile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/mobile"
         android:inputType="phone"
@@ -89,26 +105,13 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints="" tools:targetApi="o"/>
-
-    <EditText
-        android:id="@+id/editTextBranch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/branch"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.702"
-        android:autofillHints="" tools:targetApi="o"/>
+        tools:targetApi="o" />
 
     <EditText
         android:id="@+id/editTextDOB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/dob_ddmmyy"
         android:inputType="date"
@@ -117,19 +120,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.599"
-        android:autofillHints="" tools:targetApi="o"/>
+        tools:targetApi="o" />
 
-    <EditText
-        android:id="@+id/editTextYear"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/year"
-        android:inputType="number"
+    <Spinner
+        android:id="@+id/spinnerBranch"
+        android:layout_width="214dp"
+        android:layout_height="45dp"
+        android:entries="@array/branch"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.804"
-        android:autofillHints="" tools:targetApi="o"/>
+        app:layout_constraintVertical_bias="0.702" />
 </android.support.constraint.ConstraintLayout>

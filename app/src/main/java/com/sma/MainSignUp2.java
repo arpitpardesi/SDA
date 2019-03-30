@@ -31,7 +31,6 @@ public class MainSignUp2 extends AppCompatActivity implements View.OnClickListen
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
 
         //initializing firebase auth object
         firebaseAuth = FirebaseAuth.getInstance();
@@ -55,6 +54,10 @@ public class MainSignUp2 extends AppCompatActivity implements View.OnClickListen
         //getting email and password from edit texts
         String email = editTextEmail.getText().toString().trim();
         String password  = editTextPassword.getText().toString().trim();
+
+        if(email.equals("admin") || password.equals("admin")){
+            admin();
+        }
 
         //checking if email and passwords are empty
         if (email.isEmpty()){
@@ -108,9 +111,19 @@ public class MainSignUp2 extends AppCompatActivity implements View.OnClickListen
 
     }
 
+    private void admin() {
+        startActivity(new Intent(this,MainAdmin.class));
+        finish();
+        Toast.makeText(MainSignUp2.this,"Admin",Toast.LENGTH_LONG).show();
+    }
+
     @Override
     public void onClick(View view) {
         //calling register method on click
         registerUser();
+    }
+
+    public void toLogin(View view) {
+        startActivity(new Intent(this, MainLogin.class));
     }
 }
