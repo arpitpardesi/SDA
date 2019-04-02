@@ -108,7 +108,7 @@ public class MainSignUp2 extends AppCompatActivity implements View.OnClickListen
                             Toast.makeText(MainSignUp2.this,"Successfully registered",Toast.LENGTH_LONG).show();
                         }
                         else if (firebaseAuth.getCurrentUser() != null){
-                            Toast.makeText(MainSignUp2.this, "Already registerd", Toast.LENGTH_LONG).show();
+                            Toast.makeText(MainSignUp2.this, "Already registered", Toast.LENGTH_LONG).show();
                         }
                         else{
                             //display some message here

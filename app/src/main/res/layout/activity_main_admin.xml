@@ -43,6 +43,7 @@
         android:background="@color/colorAccent"
         android:text="@string/student"
         android:textColor="#fff"
+        android:onClick="forAdmin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.783"
