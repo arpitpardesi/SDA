@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity
 
     public void loginb(View v)
     {
-        Intent lb = new Intent(this, MainLogin.class );
+        Intent lb = new Intent(this, MainLogin2.class );
         startActivity(lb);
     }
     @Override

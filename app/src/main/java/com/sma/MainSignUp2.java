@@ -133,6 +133,7 @@ public class MainSignUp2 extends AppCompatActivity implements View.OnClickListen
     }
 
     public void toLogin(View view) {
-        startActivity(new Intent(this, MainLogin.class));
+        finish();
+        startActivity(new Intent(this, MainLogin2.class));
     }
 }

@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainVerify"></activity>
+        <activity android:name=".MainLogin2"></activity>
+        <activity android:name=".MainVerify" />
         <activity android:name=".MainFacultyReg" />
         <activity android:name=".MainAdmin" />
         <activity android:name=".MainSignUp2" />
@@ -27,10 +28,6 @@
         <activity
             android:name=".MainSignUp"
             android:label="@string/title_activity_main_sign_up"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".MainLogin"
-            android:label="@string/title_activity_main_login"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".MainActivity"
