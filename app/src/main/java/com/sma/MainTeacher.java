@@ -29,4 +29,11 @@ public class MainTeacher extends AppCompatActivity {
     }
 
 
+    public void toMarks(View view) {
+        startActivity(new Intent(this, MainMarks.class));
+    }
+
+    public void toUpdate(View view) {
+        startActivity(new Intent(this, MainUpdates.class));
+    }
 }

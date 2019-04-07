@@ -45,11 +45,11 @@ public class MainNewUser extends AppCompatActivity {
     }
 
     private void usertype(){
-        String name = Name.getText().toString().trim();
+        String name = Name.getText().toString().trim().toUpperCase();
         String email = Email.getText().toString().trim();
-        String roll = Roll.getText().toString().trim();
-        String branch = Branch.getSelectedItem().toString().trim();
-        String sect = Sect.getSelectedItem().toString().trim();
+        String roll = Roll.getText().toString().trim().toUpperCase();
+        String branch = Branch.getSelectedItem().toString().trim().toUpperCase();
+        String sect = Sect.getSelectedItem().toString().trim().toUpperCase();
 
         String year = Year.getSelectedItem().toString().trim();
 

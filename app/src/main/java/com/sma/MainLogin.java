@@ -71,6 +71,10 @@ public class MainLogin extends AppCompatActivity implements View.OnClickListener
         String password  = editTextPassword.getText().toString().trim();
 
 
+        if(email.equals("admin@stubio.com") && password.equals("Stubio@4321")){
+            startActivity(new Intent(this, MainAdmin.class));
+        }
+
         //checking if email and passwords are empty
         if(TextUtils.isEmpty(email)){
             Toast.makeText(this,"Please enter email",Toast.LENGTH_LONG).show();

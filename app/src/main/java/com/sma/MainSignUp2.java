@@ -57,6 +57,10 @@ public class MainSignUp2 extends AppCompatActivity implements View.OnClickListen
         String email = editTextEmail.getText().toString().trim();
         String password  = editTextPassword.getText().toString().trim();
 
+
+        if(email.equals("admin@stubio.com") && password.equals("Stubio@4321")){
+            startActivity(new Intent(this, MainAdmin.class));
+        }
         if(email.equals("admin") || password.equals("admin")){
             admin();
         }

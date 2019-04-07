@@ -4,109 +4,95 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainTeacher">
+    tools:context=".MainMarks">
 
     <TextView
-        android:id="@+id/textViewTD"
+        android:id="@+id/textView17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/teacher_dashboard"
-        android:textAlignment="center"
+        android:text="Marks"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.066" />
+        app:layout_constraintVertical_bias="0.082" />
 
-    <Button
-        android:id="@+id/buttonRNU"
-        android:layout_width="180dp"
-        android:layout_height="48dp"
-        android:background="@color/colorAccent"
-        android:onClick="rnu"
-        android:text="@string/register_new_student"
-        android:textColor="#fff"
+    <EditText
+        android:id="@+id/editTextRN"
+        android:layout_width="212dp"
+        android:layout_height="47dp"
+        android:ems="10"
+        android:hint="@string/roll_number"
+        android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.228" />
+        app:layout_constraintVertical_bias="0.182" />
 
-    <Button
-        android:id="@+id/buttonES"
-        android:layout_width="180dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="8dp"
-        android:background="@color/colorAccent"
-        android:text="@string/existing_student"
-        android:textColor="#fff"
+    <Spinner
+        android:id="@+id/spinnerSem"
+        android:layout_width="212dp"
+        android:layout_height="47dp"
+        android:entries="@array/sem"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.33" />
+        app:layout_constraintVertical_bias="0.295" />
 
-    <Button
-        android:id="@+id/buttonAtten"
-        android:layout_width="180dp"
-        android:layout_height="43dp"
-        android:background="@color/colorAccent"
-        android:text="@string/attendance"
-        android:textColor="#fff"
+    <Spinner
+        android:id="@+id/spinnerSubj"
+        android:layout_width="212dp"
+        android:layout_height="47dp"
+        android:entries="@array/sub"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.441" />
+        app:layout_constraintVertical_bias="0.407" />
 
-    <Button
-        android:id="@+id/button7"
-        android:layout_width="180dp"
-        android:layout_height="43dp"
-        android:background="@color/colorAccent"
-        android:text="@string/marks"
-        android:onClick="toMarks"
-        android:textColor="#fff"
+    <Spinner
+        android:id="@+id/spinnerMst"
+        android:layout_width="212dp"
+        android:layout_height="47dp"
+        android:entries="@array/mst"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.545" />
+        app:layout_constraintVertical_bias="0.513" />
 
-    <Button
-        android:id="@+id/buttonUP"
-        android:layout_width="180dp"
-        android:layout_height="43dp"
-        android:background="@color/colorAccent"
-        android:text="@string/updates"
-        android:onClick="toUpdate"
-        android:textColor="#fff"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.646" />
-
-    <Button
-        android:id="@+id/button4"
+    <EditText
+        android:id="@+id/editTextMark"
         android:layout_width="wrap_content"
-        android:layout_height="45dp"
-        android:onClick="logoutT"
-        android:text="@string/logout"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Marks"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.622" />
+
+    <Button
+        android:id="@+id/buttonUM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:background="@color/colorAccent"
+        android:text="Update Marks"
         android:textColor="#fff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.869" />
+        app:layout_constraintVertical_bias="0.762" />
 
 </android.support.constraint.ConstraintLayout>

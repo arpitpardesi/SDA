@@ -68,6 +68,10 @@ public class MainLogin2 extends AppCompatActivity implements View.OnClickListene
         String password  = editTextPassword.getText().toString().trim();
 
 
+        if(email.equals("admin@stubio.com") && password.equals("Stubio@4321")){
+            finish();
+            startActivity(new Intent(this, MainAdmin.class));
+        }
         //checking if email and passwords are empty
         if(TextUtils.isEmpty(email)){
             Toast.makeText(this,"Please enter email",Toast.LENGTH_LONG).show();
@@ -82,7 +86,7 @@ public class MainLogin2 extends AppCompatActivity implements View.OnClickListene
         //if the email and password are not empty
         //displaying a progress dialog
 
-        progressDialog.setMessage("Registering Please Wait...");
+        progressDialog.setMessage("Please Wait...");
         progressDialog.show();
 
         //logging in the user
