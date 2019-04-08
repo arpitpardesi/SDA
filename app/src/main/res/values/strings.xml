@@ -192,7 +192,7 @@
     <string name="dob">DOB</string>
     <string name="already_registered_login_here">Already registered? Login here</string>
     <string name="re_enter_password">Re-Enter Password</string>
-    <string name="sign_up">Sign Up</string>
+    <string name="sign_up">SIGN UP</string>
     <string name="website">Website</string>
     <string name="welcome_to_acropolis">Welcome to Acropolis</string>
     <string name="attendance">Attendance</string>
@@ -214,7 +214,7 @@
     <string name="register">Register</string>
     <string name="login_to_sda">Login to SDA</string>
     <string name="password">Password</string>
-    <string name="login">Login</string>
+    <string name="login">LOGIN</string>
     <string name="don_t_have_an_account_signup">Don\'t have an account? SignUp</string>
     <string name="username">Username</string>
     <string name="faculty">Faculty</string>
@@ -334,5 +334,6 @@
     <string name="days_present">Days present</string>
     <string name="total_days">Total days</string>
     <string name="subject">Subject</string>
+    <string name="stubio">StuBio</string>
 
 </resources>
