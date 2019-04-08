@@ -28,6 +28,9 @@ public class MainTeacher extends AppCompatActivity {
         startActivity(new Intent(this, MainActivity.class));
     }
 
+    public void toAttend(View view) {
+        startActivity(new Intent(this, MainAttendenceTe.class));
+    }
 
     public void toMarks(View view) {
         startActivity(new Intent(this, MainMarks.class));

@@ -156,6 +156,21 @@
         <item>MST 1</item>
         <item>MST 2</item>
     </string-array>
+
+    <string-array name="month">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
     <string-array name="multi_select_list_preference_default_value" />
 
     <string name="pref_title_system_sync_settings">System sync settings</string>
@@ -315,5 +330,9 @@
     <string name="enter_message">Enter message</string>
     <string name="message">Message</string>
     <string name="update">Update</string>
+    <string name="attendence">Attendence</string>
+    <string name="days_present">Days present</string>
+    <string name="total_days">Total days</string>
+    <string name="subject">Subject</string>
 
 </resources>

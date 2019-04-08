@@ -58,7 +58,7 @@ public class MainMarks extends AppCompatActivity {
             Toast.makeText(this, "Marks Updated", Toast.LENGTH_LONG).show();
         }
         else {
-            Toast.makeText(this, "Enter ", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Enter Enrollment number ", Toast.LENGTH_LONG).show();
         }
 
     }
