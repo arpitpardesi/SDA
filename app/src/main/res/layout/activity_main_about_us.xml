@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainAboutUs">
+
+    <TextView
+        android:id="@+id/textViewAU"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/about_us"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.085" />
+
+    <TextView
+        android:id="@+id/textViewTM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/team_members"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.268" />
+
+    <TextView
+        android:id="@+id/textViewAP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="aboutme"
+        android:text="@string/arpit_pardesi"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.382" />
+
+    <TextView
+        android:id="@+id/textViewDL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/devansh_laad"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        android:onClick="aboutme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.451" />
+
+    <TextView
+        android:id="@+id/textViewGD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/glenn_d_souza"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        android:onClick="aboutme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.516" />
+
+    <TextView
+        android:id="@+id/textViewHY"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/himanshu_yadav"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        android:onClick="aboutme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.578" />
+</android.support.constraint.ConstraintLayout>
