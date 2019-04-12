@@ -74,4 +74,8 @@ public class MainDashboard extends AppCompatActivity {
         Toast.makeText(getApplicationContext(), "Logout Successful", Toast.LENGTH_SHORT).show();
         startActivity(new Intent(this, MainActivity.class));
     }
+
+    public void toUpdateStu(View view) {
+        startActivity(new Intent(this, MainUpdateStu.class));
+    }
 }

@@ -54,7 +54,7 @@ public class MainMarks extends AppCompatActivity {
 
         if(!TextUtils.isEmpty(enroll)){
             Marks fData = new Marks(enroll, sem, sub, mst, marks);
-            DatabaseMarks.child(sem).child(enroll).child(mst).child(sub).setValue(fData);
+            DatabaseMarks.child(enroll).child(sem).child(mst).child(sub).setValue(fData);
             Toast.makeText(this, "Marks Updated", Toast.LENGTH_LONG).show();
         }
         else {

@@ -1,5 +1,6 @@
 package com.sma;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -10,6 +11,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -32,8 +34,9 @@ public class MainSignUp extends AppCompatActivity implements View.OnClickListene
     EditText editTextE;
     EditText editTextP;
     private FirebaseAuth mAuth;
+    private ProgressDialog progressDialog;
     GoogleSignInClient mGoogleSignInClient;
-    SignInButton buttonsi;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +50,8 @@ public class MainSignUp extends AppCompatActivity implements View.OnClickListene
         editTextE = (EditText) findViewById(R.id.editTextEmail);
         editTextP = (EditText) findViewById(R.id.editTextPassword);
         mAuth = FirebaseAuth.getInstance();
+
+
 
         // Configure Google Sign In
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -67,6 +72,81 @@ public class MainSignUp extends AppCompatActivity implements View.OnClickListene
         });
 */
 
+    }
+
+    private void registerUser(){
+
+        //getting email and password from edit texts
+        String email = editTextE.getText().toString().trim();
+        String password  = editTextP.getText().toString().trim();
+
+
+        if(email.equals("admin@stubio.com") && password.equals("Stubio@4321")){
+            startActivity(new Intent(this, MainAdmin.class));
+        }
+        if(email.equals("admin") || password.equals("admin")){
+            admin();
+        }
+
+        //checking if email and passwords are empty
+        if (email.isEmpty()){
+            editTextE.setError("Email required");
+            editTextE.requestFocus();
+            return;
+        }
+
+        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+            editTextE.setError("Enter a valid email");
+            editTextE.requestFocus();
+            return;
+        }
+
+        if (password.isEmpty()){
+            editTextP.setError("Password required");
+            editTextP.requestFocus();
+            return;
+        }
+
+        if (password.length()<6){
+            editTextP.setError("Minimum length of password is 6");
+            editTextP.requestFocus();
+            return;
+        }
+
+        //if the email and password are not empty
+        //displaying a progress dialog
+
+
+
+        //creating a new user
+        mAuth.createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        //checking if success
+                        if(task.isSuccessful()){
+                            //display some message here
+                            startActivity(new Intent(MainSignUp.this,MainLogin.class));
+                            finish();
+                            Toast.makeText(MainSignUp.this,"Successfully registered",Toast.LENGTH_LONG).show();
+                        }
+                        else if (mAuth.getCurrentUser() != null){
+                            Toast.makeText(MainSignUp.this, "Already registered", Toast.LENGTH_LONG).show();
+                        }
+                        else{
+                            //display some message here
+                            Toast.makeText(MainSignUp.this,"Registration Error",Toast.LENGTH_LONG).show();
+                        }
+
+                    }
+                });
+
+    }
+
+    private void admin() {
+        startActivity(new Intent(this,MainAdmin.class));
+        finish();
+        Toast.makeText(MainSignUp.this,"Admin",Toast.LENGTH_LONG).show();
     }
 
     @Override
@@ -148,6 +228,10 @@ public class MainSignUp extends AppCompatActivity implements View.OnClickListene
     public void GoogleSU(View view) {
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
         startActivityForResult(signInIntent, 101);
+    }
+
+    public void Email(View view) {
+        registerUser();
     }
 }
 

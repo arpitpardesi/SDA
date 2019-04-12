@@ -330,7 +330,7 @@
     <string name="enter_message">Enter message</string>
     <string name="message">Message</string>
     <string name="update">Update</string>
-    <string name="attendence">Attendence</string>
+    <string name="attendence">Attendance</string>
     <string name="days_present">Days present</string>
     <string name="total_days">Total days</string>
     <string name="subject">Subject</string>
