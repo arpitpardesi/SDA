@@ -15,10 +15,14 @@ public class MainBus extends AppCompatActivity {
         setContentView(R.layout.activity_main_bus);
 
         WebView webView = findViewById(R.id.webviewBuses);
-        webView.loadUrl("http://atc.ac.in/wp-content/uploads/2018/08/Bus-Route-06-August-2018.pdf");
+        //webView.loadUrl("http://atc.ac.in/wp-content/uploads/2018/08/Bus-Route-06-August-2018.pdf");
         webView.setWebViewClient(new WebViewClient());
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
+
+        //For opening pdf in Google Docs Viewer
+        String pdf = "http://atc.ac.in/wp-content/uploads/2018/08/Bus-Route-06-August-2018.pdf";
+        webView.loadUrl("http://drive.google.com/viewerng/viewer?embedded=true&url=" + pdf);
 
 
     }
