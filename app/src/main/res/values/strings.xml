@@ -333,12 +333,14 @@
     <string name="attendence">Attendance</string>
     <string name="days_present">Days present</string>
     <string name="total_days">Total days</string>
-    <string name="subject">Subject</string>
     <string name="stubio">StuBio</string>
     <string name="team_members">Team Members</string>
     <string name="arpit_pardesi">Arpit Pardesi</string>
     <string name="devansh_laad">Devansh Laad</string>
     <string name="glenn_d_souza">Glenn D\'Souza</string>
     <string name="himanshu_yadav">Himanshu Yadav</string>
+    <string name="textview">TextView</string>
+    <string name="subject">Subject:</string>
+    <string name="date">Date:</string>
 
 </resources>

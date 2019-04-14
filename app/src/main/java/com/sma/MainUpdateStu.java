@@ -4,8 +4,12 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
+import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
@@ -14,16 +18,22 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 
 public class MainUpdateStu extends AppCompatActivity {
     //List View
     private ListView listView;
+    private TextView mDate, mMessage, mSubject;
     //Firebase reference
     private DatabaseReference mDatabase;
+    private ChildEventListener mPostListener;
 
     private ArrayList<String> arrayList = new ArrayList<>();
     private ArrayAdapter<String> arrayAdapter;
+
+
 
 
     @Override
@@ -31,39 +41,44 @@ public class MainUpdateStu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_update_stu);
 
+        //listView = (ListView)findViewById(R.id.Message);
+
         //use child() if node is child in Firebase datebase
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        mDatabase = database.getReference("Updates");
+        mDate = findViewById(R.id.textViewDate);
+        mMessage = findViewById(R.id.textViewMessage);
 
-        listView = (ListView) findViewById(R.id.Message);
-        listView.setAdapter(arrayAdapter);
+        //Used to allow scrolling in the message
+        mMessage.setMovementMethod(new ScrollingMovementMethod());
+
+        mSubject = findViewById(R.id.textViewSub);
+        mDatabase = FirebaseDatabase.getInstance().getReference().child("Updates");
 
 
-        arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, arrayList);
 
-        mDatabase.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                String string = dataSnapshot.getValue(String.class);
-                arrayList.add(string);
-                arrayAdapter.notifyDataSetChanged();
-            }
+    }
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-                System.out.println("The read failed: " + databaseError.getCode());
+    @Override
+    protected void onStop() {
+        super.onStop();
+        if (mPostListener != null) {
+            mDatabase.removeEventListener(mPostListener);
+        }
 
-            }
-        });
-/*
-        mDatabase.addChildEventListener(new ChildEventListener() {
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        ChildEventListener postListener =new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-
-                String string = dataSnapshot.getValue(String.class);
-                arrayList.add(string);
-                arrayAdapter.notifyDataSetChanged();
-
+                UpdatesStudent post = dataSnapshot.getValue(UpdatesStudent.class);
+                // [START_EXCLUDE]
+                assert post != null;
+                mDate.setText(post.Date);
+                mSubject.setText(post.Subject);
+                mMessage.setText(post.Message);
+                // [END_EXCLUDE]
             }
 
             @Override
@@ -73,9 +88,7 @@ public class MainUpdateStu extends AppCompatActivity {
 
             @Override
             public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) {
-                String string = dataSnapshot.getValue(String.class);
-                arrayList.add(string);
-                arrayAdapter.notifyDataSetChanged();
+
             }
 
             @Override
@@ -87,22 +100,34 @@ public class MainUpdateStu extends AppCompatActivity {
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
             }
-        });
-*/
-
-        /*
-        // Attach a listener to read the data at our posts reference
-        mDatabase.addValueEventListener(new ValueEventListener() {
+        };
+   /*
+        ValueEventListener postListener = new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-
+                // Get Post object and use the values to update the UI
+                UpdatesStudent post = dataSnapshot.getValue(UpdatesStudent.class);
+                // [START_EXCLUDE]
+                mDate.setText(post.ID);
+                mMessage.setText(post.Name);
+                mSubject.setText(post.Type);
+                // [END_EXCLUDE]
             }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
-
+                // Getting Post failed, log a message
+                String TAG = "Updates";
+                Log.w(TAG, "loadPost:onCancelled", databaseError.toException());
+                // [START_EXCLUDE]
+                Toast.makeText(MainUpdateStu.this, "Failed to load post.",
+                        Toast.LENGTH_SHORT).show();
+                // [END_EXCLUDE]
             }
-        });
+        };
         */
+        mDatabase.addChildEventListener(postListener);
+        mPostListener = postListener;
+
     }
 }
