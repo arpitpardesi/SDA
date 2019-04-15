@@ -39,4 +39,8 @@ public class MainTeacher extends AppCompatActivity {
     public void toUpdate(View view) {
         startActivity(new Intent(this, MainUpdates.class));
     }
+
+    public void toExist(View view) {
+        startActivity(new Intent(this, MainExisting.class));
+    }
 }

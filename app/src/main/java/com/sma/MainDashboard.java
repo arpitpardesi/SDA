@@ -78,4 +78,16 @@ public class MainDashboard extends AppCompatActivity {
     public void toUpdateStu(View view) {
         startActivity(new Intent(this, MainUpdateStu.class));
     }
+
+    public void toMarksStu(View view){
+        startActivity(new Intent(this, MainMarksStu.class));
+    }
+
+    public void toAttenStu(View view){
+        startActivity(new Intent(this, MainAttendenceStu.class));
+    }
+
+    public void toProfile(View view) {
+        startActivity(new Intent(this, MainProfile.class));
+    }
 }

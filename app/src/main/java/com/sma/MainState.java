@@ -25,11 +25,18 @@ import java.util.List;
 
 
 public class MainState extends AppCompatActivity {
+    Spinner state, city, university, colleges;
+    String State, City, University, College;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_state);
+
+        state = findViewById(R.id.spinnerState);
+        city = findViewById(R.id.spinnerCity);
+        university = findViewById(R.id.spinnerUniversity);
+        colleges = findViewById(R.id.spinnerColleges);
 
         //findViewById(R.id.buttonSubmit).setOnClickListener(this);
 
@@ -37,8 +44,18 @@ public class MainState extends AppCompatActivity {
 
 
     public void dashboard(View view) {
-        Intent webs = new Intent(this, MainDashboard.class);
-        startActivity(webs);
+        State = state.getSelectedItem().toString().trim();
+        City = city.getSelectedItem().toString().trim();
+        University = university.getSelectedItem().toString().trim();
+        College = colleges.getSelectedItem().toString().trim();
+        if(State.equals("Madhya Pradesh") && City.equals("Indore") && University.equals("RGPV") && College.equals("Acropolis Technical Campus"))
+        {
+            finish();
+            startActivity(new Intent(this, MainDashboard.class));
+        }
+        else{
+            Toast.makeText(this, "ATC only", Toast.LENGTH_LONG).show();
+        }
     }
 /*
     @Override

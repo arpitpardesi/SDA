@@ -56,7 +56,7 @@ public class MainUpdates extends AppCompatActivity {
         if(!TextUtils.isEmpty(mess)){
             UpdateF fData = new UpdateF(sub,date, mess);
             DatabaseMess.child(sub).setValue(fData);
-            Toast.makeText(this, "Marks Updated", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Updated", Toast.LENGTH_LONG).show();
         }
         else {
             Toast.makeText(this, "Please enter message", Toast.LENGTH_LONG).show();

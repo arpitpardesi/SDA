@@ -42,6 +42,7 @@
         android:layout_marginTop="8dp"
         android:background="@color/colorAccent"
         android:text="@string/existing_student"
+        android:onClick="toExist"
         android:textColor="#fff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

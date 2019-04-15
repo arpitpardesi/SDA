@@ -103,14 +103,25 @@
 
     <string-array name="spinnerCity">
         <item>Indore</item>
+        <item>Bhopal</item>
+        <item>Gwalior</item>
+        <item>Ujjain</item>
+        <item>Sagar</item>
     </string-array>
 
     <string-array name="spinnerUniversity">
         <item>RGPV</item>
+        <item>DAVV</item>
+        <item>IIT</item>
+        <item>SAGE</item>
     </string-array>
 
     <string-array name="spinnerCollege">
         <item>Acropolis Technical Campus</item>
+        <item>AITR</item>
+        <item>IES IPS</item>
+        <item>LNCT</item>
+        <item></item>
     </string-array>
 
     <array name="branch">
@@ -339,8 +350,14 @@
     <string name="devansh_laad">Devansh Laad</string>
     <string name="glenn_d_souza">Glenn D\'Souza</string>
     <string name="himanshu_yadav">Himanshu Yadav</string>
-    <string name="textview">TextView</string>
     <string name="subject">Subject:</string>
     <string name="date">Date:</string>
+    <string name="data">Data</string>
+    <string name="department">Department</string>
+    <string name="section">Section</string>
+    <string name="textview">TextView</string>
+    <string name="mst_1">MST 1</string>
+    <string name="mst_2">MST 2</string>
+    <string name="month">Month</string>
 
 </resources>

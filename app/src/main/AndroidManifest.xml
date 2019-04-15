@@ -14,7 +14,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainUpdateStu"></activity>
+        <activity android:name=".MainAttendenceStu"></activity>
+        <activity android:name=".MainExisting" />
+        <activity android:name=".MainProfile" />
+        <activity android:name=".MainMarksStu" />
+        <activity android:name=".MainUpdateStu" />
         <activity android:name=".MainAboutUs" />
         <activity android:name=".MainAttendenceTe" />
         <activity android:name=".MainUpdates" />

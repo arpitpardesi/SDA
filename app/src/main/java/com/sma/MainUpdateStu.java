@@ -101,31 +101,7 @@ public class MainUpdateStu extends AppCompatActivity {
 
             }
         };
-   /*
-        ValueEventListener postListener = new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                // Get Post object and use the values to update the UI
-                UpdatesStudent post = dataSnapshot.getValue(UpdatesStudent.class);
-                // [START_EXCLUDE]
-                mDate.setText(post.ID);
-                mMessage.setText(post.Name);
-                mSubject.setText(post.Type);
-                // [END_EXCLUDE]
-            }
 
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-                // Getting Post failed, log a message
-                String TAG = "Updates";
-                Log.w(TAG, "loadPost:onCancelled", databaseError.toException());
-                // [START_EXCLUDE]
-                Toast.makeText(MainUpdateStu.this, "Failed to load post.",
-                        Toast.LENGTH_SHORT).show();
-                // [END_EXCLUDE]
-            }
-        };
-        */
         mDatabase.addChildEventListener(postListener);
         mPostListener = postListener;
 
