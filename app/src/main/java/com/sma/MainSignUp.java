@@ -73,7 +73,6 @@ public class MainSignUp extends AppCompatActivity implements View.OnClickListene
 */
 
     }
-
     private void registerUser(){
 
         //getting email and password from edit texts
