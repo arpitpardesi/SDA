@@ -1,4 +1,4 @@
-# SDA
+# Stubio
 Student Development Application
 
 Creating a mobile application that will serve various needs such as
